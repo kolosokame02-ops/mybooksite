@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ta: me: ne Buka Writing | Sarah Kende</title>
+  <meta name="description" content="Ta: me: ne Buka Writing — stories of endurance, determination, and courage of early traditional leaders who brought Christianity into the Samberigi Polopa Region. Authored by Sarah Kende.">
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Performance: preload / preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Social: Open Graph & Twitter -->
+  <meta property="og:title" content="Ta: me: ne Buka Writing — Sarah Kende">
+  <meta property="og:description" content="Stories of courage and faith from the Samberigi Polopa region — by Sarah Kende.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SarahKende">
+  <meta name="twitter:title" content="Ta: me: ne Buka Writing — Sarah Kende">
+  <meta name="twitter:description" content="Stories of courage and faith from the Samberigi Polopa region — by Sarah Kende.">
+
+  <!-- Favicon (replace with your real icons) -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Structured data: Book + Author -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Sarah Kende",
+        "url": "https://example.com/author/sarah-kende"
+      },
+      {
+        "@type": "Book",
+        "name": "Dekeleba the Lake Bird",
+        "author": { "@type": "Person", "name": "Sarah Kende" },
+        "description": "A journey of Christianity into the Samberigi Polopa region — showing the determination, endurance, and courage of an early traditional leader.",
+        "url": "https://example.com/books/dekeleba-the-lake-bird",
+        "image": "https://example.com/assets/book1-cover.jpg",
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #fafafa;
+      --muted: #555;
+      --brand: #2b3a67;
+      --brand-strong: #3f5b94;
+      --card: #fff;
+      --radius: 12px;
+      --max-width: 1100px;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset / Base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+
+    /* Skip link for keyboard users */
+    .skip-link{
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus{
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #000;
+      color: #fff;
+      border-radius: 6px;
+      z-index: 1000;
+    }
+
+    main{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{
+      background: linear-gradient(135deg, var(--brand), #3a5673);
+      color:#fff;
+      text-align:center;
+      padding:80px 20px;
+    }
+    header h1{font-size:2.4rem;letter-spacing:1px;margin-bottom:8px}
+    header p{opacity:.95;font-size:1.05rem;max-width:900px;margin:0 auto}
+
+    /* Sections */
+    section{padding:70px 0}
+    h2{color:var(--brand);margin-bottom:1rem;font-size:1.9rem}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+    /* Book grid */
+    .book-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.75rem;
+      margin-top:1.5rem;
+    }
+    article.book{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    article.book:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.09)}
+    figure{margin:0 0 12px 0}
+    img{width:100%;height:auto;border-radius:10px;display:block}
+    .book h3{color:var(--brand);font-size:1.2rem;margin:6px 0}
+    .book p{color:var(--muted);font-size:.96rem;flex:1;margin-bottom:12px}
+
+    /* Buttons (links styled as buttons) */
+    .buy-btn{
+      background:var(--brand);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      display:inline-block;
+      font-weight:600;
+      text-align:center;
+      transition:background .18s ease, transform .12s ease;
+      border:0;
+    }
+    .buy-btn:focus,
+    .buy-btn:focus-visible{
+      outline:3px solid rgba(63,91,148,0.18);
+      outline-offset:3px;
+    }
+    .buy-btn:hover{background:var(--brand-strong);transform:translateY(-2px)}
+
+    /* About & Reviews */
+    .about, .reviews{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:48px 30px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.04);
+      text-align:center;
+    }
+    .about p{max-width:770px;margin:0 auto;color:var(--muted)}
+
+    .reviews{background:#f4f4f4}
+    .review{
+      max-width:720px;margin:1.2rem auto;background:var(--card);padding:18px;border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.06);font-style:italic;color:#222;
+    }
+    .review span{display:block;margin-top:8px;font-weight:700;color:var(--brand)}
+
+    footer{
+      background:var(--brand);color:#fff;text-align:center;padding:1.25rem;font-size:.92rem;margin-top:2.4rem;border-radius:0 0 8px 8px
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:768px){
+      header h1{font-size:1.9rem}
+      .about, .reviews{padding:28px 18px}
+    }
+
+    /* Accessibility / reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner" aria-labelledby="site-title">
+    <h1 id="site-title">Ta: me: ne Buka Writing</h1>
+    <p>Stories of courage, endurance, and faith — inspired by the journey of Christianity into Samberigi Polopa.</p>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Books Section -->
+    <section class="books container" aria-labelledby="books-heading">
+      <h2 id="books-heading">Books by Sarah Kende</h2>
+
+      <div class="book-grid" role="list">
+        <!-- Book 1 -->
+        <article class="book" role="listitem" aria-labelledby="book1-title">
+          <figure>
+            <img src="/assets/book1-cover.jpg"
+                 alt="Cover of Dekeleba the Lake Bird"
+                 loading="lazy"
+                 decoding="async"
+                 width="800" height="1200">
+            <figcaption class="sr-only">Dekeleba the Lake Bird — cover</figcaption>
+          </figure>
+          <h3 id="book1-title">Dekeleba the Lake Bird</h3>
+          <p>
+            A journey of Christianity into the Samberigi Polopa region — showing the determination, endurance,
+            and courage of an early traditional leader who brought spiritual light and lasting change to the people of Samberigi and Polopa.
+          </p>
+          <a class="buy-btn" href="https://example.com/books/dekeleba-the-lake-bird" role="button" aria-label="Buy Dekeleba the Lake Bird">Buy Now</a>
+        </article>
+
+        <!-- Book 2 -->
+        <article class="book" role="listitem" aria-labelledby="book2-title">
+          <figure>
+            <img src="/assets/book2-cover.jpg" alt="Coming Soon — book cover" loading="lazy" decoding="async" width="800" height="1200">
+          </figure>
+          <h3 id="book2-title">Coming Soon</h3>
+          <p>Details coming soon.</p>
+          <a class="buy-btn" href="https://example.com/news" role="button" aria-label="Notify me about book two">Notify me</a>
+        </article>
+
+        <!-- Book 3 -->
+        <article class="book" role="listitem" aria-labelledby="book3-title">
+          <figure>
+            <img src="/assets/book3-cover.jpg" alt="Coming Soon — book cover" loading="lazy" decoding="async" width="800" height="1200">
+          </figure>
+          <h3 id="book3-title">Coming Soon</h3>
+          <p>Details coming soon.</p>
+          <a class="buy-btn" href="https://example.com/news" role="button" aria-label="Notify me about book three">Notify me</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Author -->
+    <section class="about container" aria-labelledby="about-heading">
+      <h2 id="about-heading">About the Author</h2>
+      <p>
+        <strong>Sarah Kende</strong> is a Papua New Guinean author and cultural storyteller dedicated to preserving
+        the narratives of courage that transformed the Samberigi Polopa region.
+        Her writing honors the traditional leaders whose endurance and faith led to the arrival of Christianity —
+        illuminating both the struggles and triumphs of a people embracing change.
+      </p>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews container" aria-labelledby="reviews-heading">
+      <h2 id="reviews-heading">What Readers Are Saying</h2>
+
+      <div class="review" aria-label="Review by Pacific Literary Review">
+        “An inspiring retelling of Samberigi’s history — Sarah Kende captures faith and resilience with grace.”
+        <span>— Pacific Literary Review</span>
+      </div>
+
+      <div class="review" aria-label="Review by Reader from Hela">
+        “A moving tribute to the early leaders who changed lives through courage and conviction.”
+        <span>— Reader from Hela</span>
+      </div>
+
+      <div class="review" aria-label="Review by Melanesian Writers Forum">
+        “Beautifully written, spiritually powerful, and culturally rich — a must-read for every generation.”
+        <span>— Melanesian Writers Forum</span>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    © 2025 Ta: me: ne Buka Writing | Written by Sarah Kende
+  </footer>
+</body>
+</html>
